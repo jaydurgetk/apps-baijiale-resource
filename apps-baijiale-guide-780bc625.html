@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百家乐 · 稳定入口与界面说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f5f7fa;
+            color: #1e2a3a;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .hero {
+            background: linear-gradient(145deg, #0b1424 0%, #1a2a3f 100%);
+            color: #eef2f6;
+            padding: 4.5rem 1.5rem 3.2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -20%;
+            width: 140%;
+            height: 60px;
+            background: #f5f7fa;
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 300;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero h1 strong {
+            font-weight: 500;
+            color: #cddbe9;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            color: #b0c4db;
+            max-width: 600px;
+            margin: 0 auto 1.8rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 1.2rem;
+        }
+
+        .hero .tagline span {
+            display: inline-block;
+            background: rgba(255,255,255,0.04);
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            color: #b8cde0;
+        }
+
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .intro-section {
+            margin-top: -1.8rem;
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2.8rem 2.5rem 2.2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            position: relative;
+            z-index: 2;
+        }
+
+        .intro-section p {
+            font-size: 1.05rem;
+            margin-bottom: 1.2rem;
+            color: #2a3b4f;
+        }
+
+        .intro-section p:first-of-type::first-letter {
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: #1a4b77;
+            margin-right: 6px;
+            line-height: 1;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem 2rem;
+            margin: 2.8rem 0 2.2rem;
+        }
+
+        .feature-item {
+            background: #f8fafc;
+            border-radius: 18px;
+            padding: 1.5rem 1.4rem;
+            border-left: 4px solid #2d6a9f;
+            transition: background 0.2s ease;
+        }
+
+        .feature-item:hover {
+            background: #eef4f9;
+        }
+
+        .feature-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e3b5a;
+            margin-bottom: 0.4rem;
+            letter-spacing: -0.01em;
+        }
+
+        .feature-item p {
+            font-size: 0.95rem;
+            color: #3d4f63;
+            margin-bottom: 0;
+        }
+
+        .scene-note {
+            background: #f0f4fa;
+            border-radius: 20px;
+            padding: 1.8rem 2rem;
+            margin: 2.5rem 0 1.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0.6rem 1.2rem;
+        }
+
+        .scene-note strong {
+            font-weight: 600;
+            color: #1a4b77;
+        }
+
+        .scene-note .badge {
+            background: #dce7f0;
+            color: #1a3a57;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .faq-mini {
+            margin: 2.8rem 0 2rem;
+            border-top: 1px solid #e3eaf0;
+            padding-top: 2rem;
+        }
+
+        .faq-mini details {
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid #eaeef3;
+            padding-bottom: 0.6rem;
+        }
+
+        .faq-mini summary {
+            font-weight: 500;
+            color: #1e3a5a;
+            cursor: pointer;
+            padding: 0.4rem 0;
+            font-size: 1rem;
+        }
+
+        .faq-mini details p {
+            font-size: 0.93rem;
+            color: #3f546b;
+            margin-top: 0.2rem;
+            padding-left: 0.3rem;
+        }
+
+        .closing {
+            text-align: center;
+            padding: 2.2rem 0 3rem;
+            font-size: 1rem;
+            color: #3b5068;
+        }
+
+        .closing a {
+            color: #1a6a9e;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .closing a:hover {
+            border-bottom-color: #1a6a9e;
+        }
+
+        .closing .small-note {
+            display: block;
+            margin-top: 1.2rem;
+            font-size: 0.85rem;
+            color: #6b7f96;
+        }
+
+        /* 响应式 */
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .intro-section {
+                padding: 2rem 1.2rem 1.8rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+            .feature-item {
+                padding: 1.2rem 1rem;
+            }
+            .scene-note {
+                flex-direction: column;
+                padding: 1.4rem 1.2rem;
+                gap: 0.5rem;
+            }
+            .faq-mini {
+                margin-top: 2rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                padding: 5rem 2rem 3.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <h1>稳定入口 · <strong>百家乐</strong></h1>
+        <div class="tagline">
+            <span>页面即路径 · 结构即说明</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro-section">
+            <p>每一款数字产品都该有一个清晰、恒定的起点。对于经常使用<a href="https://apps--baijiale.com" style="color: #1a6a9e; text-decoration: none; font-weight: 500;">百家乐</a>的用户而言，一个无干扰、指向明确的入口页面，就是效率本身。这里没有多余装饰，只有对功能入口与页面结构的平静交代。</p>
+
+            <p>以下列出这个入口页面所承载的核心信息项，它们共同构成一个轻量但完整的导航节点：</p>
+
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>直连路径</h3>
+                    <p>唯一托管地址，无需中间跳转或二次识别。主链接即为目标应用的真实着陆位置。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>状态透明</h3>
+                    <p>页面本身即说明——无脚本干扰、无隐藏重定向，访问者可以随时确认当前环境。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>轻量承载</h3>
+                    <p>极简文档结构，几乎不依赖外部资源。在任何网络条件下都能快速呈现内容。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>标识一致</h3>
+                    <p>标题、正文、链接文本均使用同一中文名称，降低认知成本，方便口碑传递。</p>
+                </div>
+            </div>
+
+            <div class="scene-note">
+                <strong>适用场景</strong>
+                <span class="badge">书签收藏</span>
+                <span class="badge">分发说明</span>
+                <span class="badge">环境确认</span>
+                <span class="badge">快速跳转</span>
+                <span style="font-size:0.9rem; color:#3f607a;">—— 一个页面，多种使用上下文</span>
+            </div>
+
+            <div class="faq-mini">
+                <details>
+                    <summary>这个页面和主应用是什么关系？</summary>
+                    <p>它是 <a href="https://apps--baijiale.com" style="color: #1a6a9e; text-decoration: underline; text-underline-offset: 4px;">百家乐</a> 的附属介绍页，仅承担指向与说明功能。主应用的所有功能与数据均通过目标域名提供，本页不代理任何业务逻辑。</p>
+                </details>
+                <details>
+                    <summary>链接是否稳定？多久更新一次？</summary>
+                    <p>只要托管环境不变，入口地址即长期有效。页面内容会随产品迭代做微调，但核心指向始终保持一致。</p>
+                </details>
+                <details>
+                    <summary>为什么强调“页面即路径”？</summary>
+                    <p>因为对于固定入口而言，页面本身也是路径的一部分——它降低了链接遗忘率，也为新用户提供了一个安静的理解起点。</p>
+                </details>
+            </div>
+        </section>
+
+        <div class="closing">
+            <p>从这一页开始，每一次访问都是一次确认。<br>
+            如果你已经在使用 <a href="https://apps--baijiale.com">百家乐</a>，这里就是你的稳定锚点。</p>
+            <span class="small-note">页面结构 · 版本 2025 · 仅作导航说明</span>
+        </div>
+    </main>
+</body>
+</html>
