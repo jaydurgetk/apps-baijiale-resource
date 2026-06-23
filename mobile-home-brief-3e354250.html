@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一个稳定的阅读入口 · 乐鱼</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f4f0;
+            font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', 'Source Han Serif CN', serif;
+            color: #2e2b27;
+            line-height: 1.7;
+            padding: 2rem 1.5rem 4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 740px;
+            width: 100%;
+            background-color: #fcfaf7;
+            padding: 2.8rem 2.2rem;
+            box-shadow: 0 0 0 1px rgba(160, 140, 120, 0.1), 0 12px 30px -8px rgba(100, 70, 40, 0.08);
+            border-radius: 20px;
+            transition: padding 0.2s;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 450;
+            letter-spacing: 0.02em;
+            color: #3a322c;
+            margin-bottom: 0.6rem;
+            border-left: 4px solid #b59a7a;
+            padding-left: 1rem;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #7f6e5d;
+            margin-bottom: 2.2rem;
+            font-style: italic;
+            border-bottom: 1px dashed #d9cfc0;
+            padding-bottom: 1.2rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            word-break: break-word;
+        }
+
+        .pull-quote {
+            background-color: #efe7dd;
+            padding: 1.6rem 1.8rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            border-left: 6px solid #b59a7a;
+            font-style: normal;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .pull-quote::before {
+            content: "💡 ";
+            font-size: 1.2rem;
+        }
+
+        .tip-box {
+            background: #f1ede6;
+            padding: 1.2rem 1.6rem;
+            border-radius: 16px;
+            margin: 2rem 0 1.8rem;
+            border: 1px solid #dccfc0;
+            font-size: 0.96rem;
+        }
+
+        .tip-box strong {
+            color: #5d4a35;
+            font-weight: 500;
+        }
+
+        .faq-summary {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 2.2rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #ddd2c3;
+        }
+
+        .faq-item {
+            background: transparent;
+            padding: 0.2rem 0;
+        }
+
+        .faq-item h3 {
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: #4f4035;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-item p {
+            font-size: 0.95rem;
+            color: #5f5244;
+            margin-bottom: 0.4rem;
+        }
+
+        .inline-link {
+            color: #785e44;
+            text-decoration: none;
+            border-bottom: 1px solid #c8b6a2;
+            transition: border-color 0.15s, color 0.15s;
+            font-weight: 400;
+        }
+
+        .inline-link:hover {
+            color: #3f2f22;
+            border-bottom-color: #785e44;
+        }
+
+        .closing {
+            margin-top: 2.8rem;
+            text-align: right;
+            font-size: 0.95rem;
+            color: #7b6b5a;
+            border-top: 1px solid #e5d9cc;
+            padding-top: 1.6rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .page {
+                padding: 1.8rem 1.2rem;
+                border-radius: 16px;
+            }
+            h1 {
+                font-size: 1.7rem;
+                padding-left: 0.8rem;
+            }
+            .pull-quote {
+                padding: 1.2rem 1.2rem;
+                margin: 1.6rem 0;
+            }
+        }
+
+        @media (min-width: 1000px) {
+            .page {
+                padding: 3.2rem 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h1>从一处安静的角落开始</h1>
+        <div class="subhead">关于「乐鱼」以及一个始终稳定的入口</div>
+
+        <p>
+            在这个信息不断涌动的网络里，我们都习惯了寻找一个可以放松浏览、不必反复验证链接是否失效的地方。无论是阅读一篇长文，还是偶尔回看某个收藏的页面，一个足够稳定的入口本身就意味着一种信任。今天想聊的，就是这个叫做「乐鱼」的站点，以及它背后那种朴素的存在方式。
+        </p>
+
+        <p>
+            最初注意到<a href="https://mobile-home-leyu.com" class="inline-link">乐鱼</a>，是因为它的页面结构很轻，加载快，而且一年下来几乎没碰到过打不开的情况。在许多人热衷于追逐新域名、不断变换地址的当下，一个能一直保持原址可访问的网站，反而变得稀有。也许正是这种“不变”，让人更愿意把它当作一个安静的阅读入口。
+        </p>
+
+        <div class="pull-quote">
+            一个值得反复回去的页面，不需要有多华丽，只要它还在原来的位置等你。
+        </div>
+
+        <p>
+            从内容上看，乐鱼并不追求密集的更新，更像是按自己的节奏分享一些笔记、随笔或者资料整理。没有弹窗广告，也没有复杂的注册流程。这种克制，反而让每次访问都变得轻松。如果你需要一个不被打扰的阅读空间，把它放在书签栏里会是很自然的选择。
+        </p>
+
+        <p>
+            我常常在周末打开它，泡杯茶，把那些篇幅不长的文章一篇篇读过去。偶尔看到某段话，会停下来想一想。那种感觉就好像走进一家熟悉的小书店，老板不会一直跟在身后推销，你可以随便翻，随时走，下次来它还是那个样子。
+        </p>
+
+        <div class="tip-box">
+            <strong>小提示：</strong> 如果你正在寻找一个长期稳定的个人站点入口，可以试试把 <a href="https://mobile-home-leyu.com" class="inline-link">乐鱼</a> 收藏起来。它没有复杂的导航，打开就是内容。适合那些只是想安静看点什么、不想被花哨功能分心的人。
+        </div>
+
+        <p>
+            当然，每个人对“好网站”的定义不同。有的人看重设计，有的人偏爱互动。但对于只想找一个踏实、能随时打开翻翻的页面来说，乐鱼恰好满足了这个需求。它的存在本身，就是对“稳定性”的一种践行。
+        </p>
+
+        <!-- FAQ 摘要 -->
+        <div class="faq-summary">
+            <div class="faq-item">
+                <h3>▎ 乐鱼需要注册才能访问吗？</h3>
+                <p>不需要。直接打开就是公开内容，也没有会员墙或登录要求。</p>
+            </div>
+            <div class="faq-item">
+                <h3>▎ 内容更新频率如何？</h3>
+                <p>并不固定，但每一篇都经过认真组织，没有凑数的文章。适合闲暇时慢慢翻阅。</p>
+            </div>
+            <div class="faq-item">
+                <h3>▎ 这个站会突然消失或换地址吗？</h3>
+                <p>从目前的情况来看，维护者很重视可用性，此前一直保持原域名可访问。当然网络世界没有绝对的保证，但它的稳定性记录相当可靠。</p>
+            </div>
+        </div>
+
+        <div class="closing">
+            —— 愿每一个喜欢的页面，都能长久地等在那里。
+        </div>
+    </div>
+</body>
+</html>
